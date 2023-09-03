@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block title %}New Asset{% endblock %}
+
+{% block content %}
+    <a href="{% url 'welcome' %}">Home</a>
+    <h1>Create a new asset</h1>
+    <form method="post">
+        <table>
+            {{ form }}
+        </table>
+        {% csrf_token %}
+        <button type="submit">Save</button>
+    </form>
+{% endblock %}

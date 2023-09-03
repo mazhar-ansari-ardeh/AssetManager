@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "AssetManager"
+version = "0.1.0"
+description = ""
+authors = ["mazhar-ansari-ardeh mazhar.ansari.ardeh@gmail.com", "mahnaze220 <mahnaz.ebrahimi@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+django = "^4.2.4"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
