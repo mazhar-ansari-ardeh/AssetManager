@@ -4,6 +4,7 @@
 
 {% block content %}
     <h2>Assets</h2>
+    <a href="{% url 'new' %}">New</a>
     <ul>
         {% for asset in assets %}
         <li>
@@ -13,7 +14,7 @@
         </li>
         {% endfor %}
     </ul>
-    <p>
-        {{asset}}
-    </p>
+{#    <p>#}
+{#        {{asset}}#}
+{#    </p>#}
 {% endblock %}

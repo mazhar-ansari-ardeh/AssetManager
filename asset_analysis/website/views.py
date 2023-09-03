@@ -6,12 +6,14 @@ from django.contrib.auth import login, authenticate, logout
 
 
 def welcome(request):
-    global user
     user_id = request.session.get('user_id')
     if user_id is not None:
         user = User.objects.get(pk=user_id)
+        username = user.username
+    else:
+        username = ''
     return render(request, "website/welcome.html",
-                  {"current_user": user.username})
+                  {"current_user": username})
 
 
 def about(request):

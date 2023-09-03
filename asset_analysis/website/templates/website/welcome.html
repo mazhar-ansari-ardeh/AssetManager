@@ -3,19 +3,22 @@
 {% block title %}Welcome{% endblock %}
 
 {% block content %}
-    <h1>Welcome to the Asset Analyser {{ current_user }}!</h1>
-    <p>
-        <a href="{% url 'assets' %}">
-            Assets
-        </a>
-    </p>
-    <p>
-        <a href="{% url 'signup' %}">
-            Sign Up
-        </a>
-        |
-        <a href="{% url 'signin' %}">
-            Sign In
-        </a>
-    </p>
+    {% if current_user|length %}
+        <h1>Welcome to the Asset Analyser {{ current_user }}!</h1>
+        <p>
+            <a href="{% url 'assets' %}">
+                Assets
+            </a>
+        </p>
+    {% else %}
+        <p>
+            <a href="{% url 'signup' %}">
+                Sign Up
+            </a>
+            |
+            <a href="{% url 'signin' %}">
+                Sign In
+            </a>
+        </p>
+    {% endif %}
 {% endblock %}
