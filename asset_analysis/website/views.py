@@ -10,9 +10,11 @@ def welcome(request):
     if user_id is not None:
         user = User.objects.get(pk=user_id)
         username = user.username
+        return render(request, "website/dashboard.html",
+                      {"current_user": username})
     else:
         username = ''
-    return render(request, "website/welcome.html",
+        return render(request, "website/welcome.html",
                   {"current_user": username})
 
 
@@ -49,4 +51,7 @@ def signIn(request):
 
 def signOut(request):
     logout(request)
-    return redirect('signin')
+    return redirect('welcome')
+
+def dashboard(request):
+    return redirect('assets')
