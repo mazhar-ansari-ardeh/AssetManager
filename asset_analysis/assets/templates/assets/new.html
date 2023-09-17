@@ -3,7 +3,6 @@
 {% block title %}New Asset{% endblock %}
 
 {% block content %}
-    <a href="{% url 'welcome' %}">Home</a>
     <h1>Create a new asset</h1>
     <form method="post">
         <table>
@@ -11,5 +10,6 @@
         </table>
         {% csrf_token %}
         <button type="submit">Save</button>
+        <a href="{% url 'assets' %}">Cancel</a>
     </form>
 {% endblock %}
