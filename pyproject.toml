@@ -1,13 +1,14 @@
 [tool.poetry]
-name = "AssetManager"
+name = "assetmanager"
 version = "0.1.0"
 description = ""
-authors = ["mazhar-ansari-ardeh mazhar.ansari.ardeh@gmail.com", "mahnaze220 <mahnaz.ebrahimi@gmail.com>"]
+authors = ["mahnaze220 <mahnaz.ebrahimi@gmail.com>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.9"
-django = "^4.2.4"
+django = "^4.2.6"
+pillow = "^10.1.0"
 
 
 [build-system]
